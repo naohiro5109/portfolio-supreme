@@ -130,6 +130,76 @@
         "padding_bottom": 36
       }
     },
+    "collaboration-ranking-items": {
+      "type": "tab-collection-list",
+      "blocks": {
+        "tab_1": {
+          "type": "tab_block",
+          "settings": {
+            "title": "tab1",
+            "collection": "recommend-items"
+          }
+        },
+        "tab_2": {
+          "type": "tab_block",
+          "settings": {
+            "title": "tab2",
+            "collection": "all-items"
+          }
+        },
+        "tab_3": {
+          "type": "tab_block",
+          "settings": {
+            "title": "tab3",
+            "collection": "frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "tab_1",
+        "tab_2",
+        "tab_3"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "見出し"
+      }
+    },
+    "weekly-ranking-items": {
+      "type": "tab-collection-list",
+      "blocks": {
+        "tab_1": {
+          "type": "tab_block",
+          "settings": {
+            "title": "tab1",
+            "collection": "recommend-items"
+          }
+        },
+        "tab_2": {
+          "type": "tab_block",
+          "settings": {
+            "title": "tab2",
+            "collection": "all-items"
+          }
+        },
+        "tab_3": {
+          "type": "tab_block",
+          "settings": {
+            "title": "tab3",
+            "collection": "frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "tab_1",
+        "tab_2",
+        "tab_3"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "見出し"
+      }
+    },
     "recommend-products": {
       "type": "featured-collection",
       "settings": {
@@ -186,6 +256,8 @@
     "slideshow_kKVcpE",
     "new-products",
     "featured_articles",
+    "collaboration-ranking-items",
+    "weekly-ranking-items",
     "recommend-products",
     "information",
     "main-search"

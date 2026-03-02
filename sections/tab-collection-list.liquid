@@ -1,0 +1,100 @@
+<div class="tabs">
+  <div class="tab-buttons">
+    {% for block in section.blocks %}
+      <button class="tab-button {% if forloop.first %}active{% endif %}" data-tab="tab{{ forloop.index }}">{{ block.settings.title }}</button>
+    {% endfor %}
+  </div>
+
+  {% for block in section.blocks %}
+    <div class="tab-content {% if forloop.first %}active{% endif %}" id="tab{{ forloop.index }}">
+      <ul class="{{ section.id }}-col4">
+        {% assign collection = collections[block.settings.collection] %}
+        {% for product in collection.products limit: 8 %}
+          {% render 'card-product', card_product: product, section_id: section.id %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+.tab-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.tab-button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.tab-content {
+  display: none;
+  margin-top: 16px;
+}
+
+.tab-content.active {
+  display: block;
+}
+</style>
+
+<script>
+  function initTabs() {
+    document.querySelectorAll('.tabs').forEach(tab => {
+      const buttons = tab.querySelectorAll('.tab-button');
+      const contents = tab.querySelectorAll('.tab-content');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const target = button.dataset.tab;
+
+          buttons.forEach(b => b.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+
+          button.classList.add('active');
+          tab.querySelector('#' + target).classList.add('active');
+        });
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initTabs);
+  document.addEventListener('shopify:section:load', initTabs);
+</script>
+
+{% schema %}
+{
+  "name": "タブメニュー商品リスト",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "タイトル",
+      "default": "見出し"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab_block",
+      "name": "タブメニューブロック",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "タブボタン"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "コレクション"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "タブメニュー商品リスト"
+    }
+  ]
+}
+{% endschema %}
