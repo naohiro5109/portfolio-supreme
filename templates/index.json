@@ -413,6 +413,80 @@
       ],
       "settings": {}
     },
+    "brand-list": {
+      "type": "brand-list",
+      "blocks": {
+        "block_1": {
+          "type": "brand_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/brand/nike",
+            "img_pc": "shopify://shop_images/brand1.jpg",
+            "img_sp": "shopify://shop_images/brand1_sp.jpg",
+            "alt": "ブランド画像1",
+            "name": "NIKE ナイキ"
+          }
+        },
+        "block_2": {
+          "type": "brand_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/brand/thenorthface",
+            "img_pc": "shopify://shop_images/brand2.jpg",
+            "img_sp": "shopify://shop_images/brand2_sp.jpg",
+            "alt": "ブランド画像2",
+            "name": "The North Face ノースフェイス"
+          }
+        },
+        "block_3": {
+          "type": "brand_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/brand/newera",
+            "img_pc": "shopify://shop_images/brand3.jpg",
+            "img_sp": "shopify://shop_images/brand3_sp.jpg",
+            "alt": "ブランド画像3",
+            "name": "New Era ニューエラ"
+          }
+        },
+        "block_4": {
+          "type": "brand_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/brand/vans",
+            "img_pc": "shopify://shop_images/brand4.jpg",
+            "img_sp": "shopify://shop_images/brand4_sp.jpg",
+            "alt": "ブランド画像4",
+            "name": "VANS ヴァンズ"
+          }
+        },
+        "block_5": {
+          "type": "brand_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/brand/hystericglamour",
+            "img_pc": "shopify://shop_images/brand5.jpg",
+            "img_sp": "shopify://shop_images/brand5_sp.jpg",
+            "alt": "ブランド画像5",
+            "name": "HYSTERIC GLAMOUR ヒステリックグラマー"
+          }
+        },
+        "block_6": {
+          "type": "brand_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/brand/othercollaboration",
+            "img_pc": "shopify://shop_images/brand6.jpg",
+            "img_sp": "shopify://shop_images/brand6_sp.jpg",
+            "alt": "ブランド画像6",
+            "name": "Others その他コラボアイテム"
+          }
+        }
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3",
+        "block_4",
+        "block_5",
+        "block_6"
+      ],
+      "settings": {}
+    },
     "main-search": {
       "type": "main-search",
       "name": "t:sections.main-search.presets.name",
@@ -444,6 +518,7 @@
     "recommend-products",
     "information",
     "category-list",
+    "brand-list",
     "main-search"
   ]
 }

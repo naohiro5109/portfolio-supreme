@@ -1,0 +1,78 @@
+<section>
+  <ul class="brand-list">
+    {% for block in section.blocks %}
+      {% if block.settings.img_pc != blank %}
+        <li {{ block.shopify_attributes }}>
+          {% if block.settings.url != blank %}
+            <a href="{{ block.settings.url }}">
+          {% endif %}
+
+          <picture>
+            {% if block.settings.img_sp != blank %}
+              <source media="(max-width: 768px)" srcset="{{ block.settings.img_sp | image_url }}">
+            {% endif %}
+
+            <img
+              src="{{ block.settings.img_pc | image_url }}"
+              alt="{{ block.settings.alt }}"
+              width="100%"
+              height="auto"
+              loading="lazy"
+            >
+          </picture>
+
+          <p class="brand-list-name">{{ block.settings.name }}</p>
+
+          {% if block.settings.url != blank %}
+            </a>
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+{% schema %}
+{
+  "name": "ブランドリスト",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "brand_block",
+      "name": "ブランドブロック",
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "ブランドURL"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_pc",
+          "label": "ブランド画像(PC)"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_sp",
+          "label": "ブランド画像(SP)"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "ブランド画像代替テキスト"
+        },
+        {
+          "type": "textarea",
+          "id": "name",
+          "label": "ブランドネーム"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "ブランドリスト"
+    }
+  ]
+}
+{% endschema %}
