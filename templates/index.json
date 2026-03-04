@@ -200,6 +200,44 @@
         "title": "見出し"
       }
     },
+    "banner-list": {
+      "type": "banner-list",
+      "blocks": {
+        "block_1": {
+          "type": "banner_block",
+          "settings": {
+            "url": "https://be-supremer.com/f/guide#guide",
+            "img_pc": "shopify://shop_images/bnr1.jpg",
+            "img_sp": "shopify://shop_images/bnr1_sp.jpg",
+            "alt": "バナー画像1"
+          }
+        },
+        "block_2": {
+          "type": "banner_block",
+          "settings": {
+            "url": "https://be-supremer.com/f/supremeonlineinfo006",
+            "img_pc": "shopify://shop_images/bnr2.jpg",
+            "img_sp": "shopify://shop_images/bnr2_sp.jpg",
+            "alt": "バナー画像2"
+          }
+        },
+        "block_3": {
+          "type": "banner_block",
+          "settings": {
+            "url": "https://be-supremer.com/f/supremeonlineinfo047",
+            "img_pc": "shopify://shop_images/bnr3.jpg",
+            "img_sp": "shopify://shop_images/bnr3_sp.jpg",
+            "alt": "バナー画像3"
+          }
+        }
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3"
+      ],
+      "settings": {}
+    },
     "recommend-products": {
       "type": "featured-collection",
       "settings": {
@@ -249,7 +287,22 @@
     "main-search": {
       "type": "main-search",
       "name": "t:sections.main-search.presets.name",
-      "settings": {}
+      "settings": {
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "article_show_date": true,
+        "article_show_author": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -258,6 +311,7 @@
     "featured_articles",
     "collaboration-ranking-items",
     "weekly-ranking-items",
+    "banner-list",
     "recommend-products",
     "information",
     "main-search"
