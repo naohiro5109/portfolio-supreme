@@ -618,7 +618,31 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    }
+    },
+    "about": {
+      "type": "about",
+      "settings": {
+        "img_pc": "shopify://shop_images/about_bnr.jpg",
+        "img_sp": "shopify://shop_images/about_bnr_sp.jpg",
+        "alt": "",
+        "head": "Supreme(シュプリーム)の正規品なら【Be-Supremer(ビーシュプリーマー)】",
+        "icon": "",
+        "icon_alt": "",
+        "text": "Supremeオンライン通販専門店として、世界中で有名となったスケーターブランドであるSupremeを長年お取り扱いしており、正規品・本物のみを4,000点以上を取り揃えています。お探しの商品のリクエストや商品サイズ感のご相談、またプレゼント商品選びのご相談も含め、ご気軽にお問い合わせくださいませ。"
+      },
+      "blocks": {
+        "block_1": {
+          "type": "sns_icon_block",
+          "settings": {
+            "icon": "instagram",
+            "url": "https://www.instagram.com/be_supremer/"
+          }
+        },
+      },
+      "block_order": [
+        "block_1",
+      ]
+    },
   },
   "order": [
     "slideshow_kKVcpE",
@@ -632,6 +656,7 @@
     "category-list",
     "brand-list",
     "season-list",
-    "main-search"
+    "main-search",
+    "about"
   ]
 }

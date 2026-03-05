@@ -1,0 +1,108 @@
+<section>
+  <div class="about-wrap">
+    <picture>
+      {% if section.settings.img_sp != blank %}
+        <source media="(max-width: 768px)" srcset="{{ section.settings.img_sp | image_url }}">
+      {% endif %}
+
+      <img
+        src="{{ section.settings.img_pc | image_url }}"
+        alt="{{ section.settings.alt }}"
+        width="100%"
+        height="auto"
+        loading="lazy"
+      >
+    </picture>
+    <div class="about-cont">
+      <p class="about-cont-head">{{ section.settings.head }}</p>
+      <ul class="about-sns">
+        {% for block in section.blocks %}
+          {% if block.settings.url != blank %}
+            <li {{ block.shopify_attributes }}>
+              <a href="{{ block.settings.url }}" target="_blank">
+                {% case block.settings.icon %}
+                  {% when 'instagram' %}
+                    {% render 'icon-instagram' %}
+                  {% when 'x' %}
+                    {% render 'icon-x' %}
+                {% endcase %}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <p class="about-cont-text">{{ section.settings.text }}</p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "サイト紹介",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "img_pc",
+      "label": "サイト紹介画像(PC)"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_sp",
+      "label": "サイト紹介画像(SP)"
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "サイト紹介画像代替テキスト"
+    },
+    {
+      "type": "textarea",
+      "id": "head",
+      "label": "サイト紹介見出し"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "SNSアイコン"
+    },
+    {
+      "type": "text",
+      "id": "icon_alt",
+      "label": "SNSアイコン代替テキスト"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "サイト紹介テキスト"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "sns_icon_block",
+      "name": "SNS",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "SNSアイコン",
+          "options": [
+            { "value": "instagram", "label": "Instagram" },
+            { "value": "x", "label": "X" },
+            { "value": "youtube", "label": "YouTube" }
+          ]
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "SNSアイコンURL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "サイト紹介"
+    }
+  ]
+}
+{% endschema %}
