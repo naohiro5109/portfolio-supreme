@@ -1,0 +1,96 @@
+<section>
+  <div class="about-wrap">
+    <picture>
+      {% if section.settings.img_sp != blank %}
+        <source media="(max-width: 768px)" srcset="{{ section.settings.img_sp | image_url }}">
+      {% endif %}
+
+      <img
+        src="{{ section.settings.img_pc | image_url }}"
+        alt="{{ section.settings.alt }}"
+        width="100%"
+        height="auto"
+        loading="lazy"
+      >
+    </picture>
+    <div class="about-cont">
+      <p class="about-cont-head">{{ section.settings.head }}</p>
+      {% for block in section.blocks %}
+        <img
+          src="{{ block.settings.icon | image_url }}"
+          alt="{{ block.settings.alt }}"
+          width="100%"
+          height="auto"
+          loading="lazy"
+        >
+      {% endfor %}
+      <p class="about-cont-text">{{ section.settings.text }}</p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "サイト紹介",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "img_pc",
+      "label": "サイト紹介画像(PC)"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_sp",
+      "label": "サイト紹介画像(SP)"
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "サイト紹介画像代替テキスト"
+    },
+    {
+      "type": "textarea",
+      "id": "head",
+      "label": "サイト紹介見出し"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "SNSアイコン"
+    },
+    {
+      "type": "text",
+      "id": "icon_alt",
+      "label": "SNSアイコン代替テキスト"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "サイト紹介テキスト"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_block",
+      "name": "ブランドブロック",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "アイコン画像"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "アイコン画像代替テキスト"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "サイト紹介"
+    }
+  ]
+}
+{% endschema %}

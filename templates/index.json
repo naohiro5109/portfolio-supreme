@@ -284,6 +284,321 @@
         "padding_bottom": 36
       }
     },
+    "category-list": {
+      "type": "category-list",
+      "blocks": {
+        "block_1": {
+          "type": "category_block",
+          "settings": {
+            "url": "",
+            "img_pc": "shopify://shop_images/item1.jpg",
+            "img_sp": "shopify://shop_images/item1_sp.jpg",
+            "alt": "カテゴリー画像1",
+            "name": "ALL"
+          }
+        },
+        "block_2": {
+          "type": "category_block",
+          "settings": {
+            "url": "",
+            "img_pc": "shopify://shop_images/item2.jpg",
+            "img_sp": "shopify://shop_images/item2_sp.jpg",
+            "alt": "カテゴリー画像2",
+            "name": "Tシャツ・ロングスリーブ"
+          }
+        },
+        "block_3": {
+          "type": "category_block",
+          "settings": {
+            "url": "",
+            "img_pc": "shopify://shop_images/item3.jpg",
+            "img_sp": "shopify://shop_images/item3_sp.jpg",
+            "alt": "カテゴリー画像3",
+            "name": "パーカー・トレーナー"
+          }
+        },
+        "block_4": {
+          "type": "category_block",
+          "settings": {
+            "url": "",
+            "img_pc": "shopify://shop_images/item4.jpg",
+            "img_sp": "shopify://shop_images/item4_sp.jpg",
+            "alt": "カテゴリー画像4",
+            "name": "ジャケット・アウター"
+          }
+        },
+        "block_5": {
+          "type": "category_block",
+          "settings": {
+            "url": "",
+            "img_pc": "shopify://shop_images/item5.jpg",
+            "img_sp": "shopify://shop_images/item5_sp.jpg",
+            "alt": "カテゴリー画像5",
+            "name": "キャップ・ハット"
+          }
+        },
+        "block_6": {
+          "type": "category_block",
+          "settings": {
+            "url": "",
+            "img_pc": "shopify://shop_images/item6.jpg",
+            "img_sp": "shopify://shop_images/item6_sp.jpg",
+            "alt": "カテゴリー画像6",
+            "name": "ニット帽・ビーニー"
+          }
+        },
+        "block_7": {
+          "type": "category_block",
+          "settings": {
+            "url": "",
+            "img_pc": "shopify://shop_images/item7.jpg",
+            "img_sp": "shopify://shop_images/item7_sp.jpg",
+            "alt": "カテゴリー画像7",
+            "name": "バックパック・リュック"
+          }
+        },
+        "block_8": {
+          "type": "category_block",
+          "settings": {
+            "url": "",
+            "img_pc": "shopify://shop_images/item8.jpg",
+            "img_sp": "shopify://shop_images/item8_sp.jpg",
+            "alt": "カテゴリー画像8",
+            "name": "その他バッグ類"
+          }
+        },
+        "block_9": {
+          "type": "category_block",
+          "settings": {
+            "url": "",
+            "img_pc": "shopify://shop_images/item9.jpg",
+            "img_sp": "shopify://shop_images/item9_sp.jpg",
+            "alt": "カテゴリー画像9",
+            "name": "スニーカー・ブーツ"
+          }
+        },
+        "block_10": {
+          "type": "category_block",
+          "settings": {
+            "url": "",
+            "img_pc": "shopify://shop_images/item10.jpg",
+            "img_sp": "shopify://shop_images/item10_sp.jpg",
+            "alt": "カテゴリー画像",
+            "name": "パンツ・ショーツ"
+          }
+        },
+        "block_11": {
+          "type": "category_block",
+          "settings": {
+            "url": "",
+            "img_pc": "shopify://shop_images/item11.jpg",
+            "img_sp": "shopify://shop_images/item11_sp.jpg",
+            "alt": "カテゴリー画像11",
+            "name": "アクセサリー"
+          }
+        },
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3",
+        "block_4",
+        "block_5",
+        "block_6",
+        "block_7",
+        "block_8",
+        "block_9",
+        "block_10",
+        "block_11",
+      ],
+      "settings": {}
+    },
+    "brand-list": {
+      "type": "brand-list",
+      "blocks": {
+        "block_1": {
+          "type": "brand_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/brand/nike",
+            "img_pc": "shopify://shop_images/brand1.jpg",
+            "img_sp": "shopify://shop_images/brand1_sp.jpg",
+            "alt": "ブランド画像1",
+            "name": "NIKE ナイキ"
+          }
+        },
+        "block_2": {
+          "type": "brand_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/brand/thenorthface",
+            "img_pc": "shopify://shop_images/brand2.jpg",
+            "img_sp": "shopify://shop_images/brand2_sp.jpg",
+            "alt": "ブランド画像2",
+            "name": "The North Face ノースフェイス"
+          }
+        },
+        "block_3": {
+          "type": "brand_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/brand/newera",
+            "img_pc": "shopify://shop_images/brand3.jpg",
+            "img_sp": "shopify://shop_images/brand3_sp.jpg",
+            "alt": "ブランド画像3",
+            "name": "New Era ニューエラ"
+          }
+        },
+        "block_4": {
+          "type": "brand_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/brand/vans",
+            "img_pc": "shopify://shop_images/brand4.jpg",
+            "img_sp": "shopify://shop_images/brand4_sp.jpg",
+            "alt": "ブランド画像4",
+            "name": "VANS ヴァンズ"
+          }
+        },
+        "block_5": {
+          "type": "brand_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/brand/hystericglamour",
+            "img_pc": "shopify://shop_images/brand5.jpg",
+            "img_sp": "shopify://shop_images/brand5_sp.jpg",
+            "alt": "ブランド画像5",
+            "name": "HYSTERIC GLAMOUR ヒステリックグラマー"
+          }
+        },
+        "block_6": {
+          "type": "brand_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/brand/othercollaboration",
+            "img_pc": "shopify://shop_images/brand6.jpg",
+            "img_sp": "shopify://shop_images/brand6_sp.jpg",
+            "alt": "ブランド画像6",
+            "name": "Others その他コラボアイテム"
+          }
+        }
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3",
+        "block_4",
+        "block_5",
+        "block_6"
+      ],
+      "settings": {}
+    },
+    "season-list": {
+      "type": "season-list",
+      "blocks": {
+        "block_1": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2025aw",
+            "text": "25AW/2025秋冬"
+          }
+        },
+        "block_2": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2025ss",
+            "text": "25SS/2025春夏"
+          }
+        },
+        "block_3": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2023aw",
+            "text": "24AW/2024秋冬"
+          }
+        },
+        "block_4": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2024ss",
+            "text": "24SS/2024春夏"
+          }
+        },
+        "block_5": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2023aw",
+            "text": "23AW/2023秋冬"
+          }
+        },
+        "block_6": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2023ss",
+            "text": "23SS/2023春夏"
+          }
+        },
+        "block_7": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2022aw",
+            "text": "22AW/2022秋冬"
+          }
+        },
+        "block_8": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2022ss",
+            "text": "22SS/2022春夏"
+          }
+        },
+        "block_9": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2021aw",
+            "text": "21FW/2021秋冬"
+          }
+        },
+        "block_10": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2021ss",
+            "text": "21SS/2021春夏"
+          }
+        },
+        "block_11": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2020aw",
+            "text": "20FW/2020秋冬"
+          }
+        },
+        "block_12": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2020ss",
+            "text": "20SS/2020春夏"
+          }
+        },
+        "block_13": {
+          "type": "season_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/season/2019aw_2017ss",
+            "text": "19FW/2019秋冬以前"
+          }
+        },
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3",
+        "block_4",
+        "block_5",
+        "block_6",
+        "block_7",
+        "block_8",
+        "block_9",
+        "block_10",
+        "block_11",
+        "block_12",
+        "block_13",
+      ],
+      "settings": {}
+    },
     "main-search": {
       "type": "main-search",
       "name": "t:sections.main-search.presets.name",
@@ -303,7 +618,30 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    }
+    },
+    "about": {
+      "type": "about",
+      "settings": {
+        "img_pc": "shopify://shop_images/about_bnr.jpg",
+        "img_sp": "shopify://shop_images/about_bnr_sp.jpg",
+        "alt": "",
+        "head": "Supreme(シュプリーム)の正規品なら【Be-Supremer(ビーシュプリーマー)】",
+        "icon": "",
+        "icon_alt": "",
+        "text": "Supremeオンライン通販専門店として、世界中で有名となったスケーターブランドであるSupremeを長年お取り扱いしており、正規品・本物のみを4,000点以上を取り揃えています。お探しの商品のリクエストや商品サイズ感のご相談、またプレゼント商品選びのご相談も含め、ご気軽にお問い合わせくださいませ。"
+      },
+      "blocks": {
+        "block_1": {
+          "type": "icon_block",
+          "settings": {
+            "alt": "Instagram"
+          }
+        },
+      },
+      "block_order": [
+        "block_1",
+      ]
+    },
   },
   "order": [
     "slideshow_kKVcpE",
@@ -314,6 +652,10 @@
     "banner-list",
     "recommend-products",
     "information",
-    "main-search"
+    "category-list",
+    "brand-list",
+    "season-list",
+    "main-search",
+    "about"
   ]
 }

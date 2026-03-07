@@ -1,0 +1,49 @@
+<section>
+  <ul class="season-list">
+    {% for block in section.blocks %}
+      {% if block.settings.text != blank %}
+        <li {{ block.shopify_attributes }}>
+          {% if block.settings.url != blank %}
+            <a href="{{ block.settings.url }}" class="season-list-button">
+          {% endif %}
+
+          {{ block.settings.text }}
+
+          {% if block.settings.url != blank %}
+            </a>
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+{% schema %}
+{
+  "name": "シーズンリスト",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "season_block",
+      "name": "シーズンブロック",
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "シーズンURL"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "ボタンテキスト"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "シーズンリスト"
+    }
+  ]
+}
+{% endschema %}
