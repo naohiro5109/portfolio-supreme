@@ -1,66 +1,30 @@
-<div class="tabs">
-  <div class="tab-buttons">
-    {% for block in section.blocks %}
-      <button class="tab-button {% if forloop.first %}active{% endif %}" data-tab="tab{{ forloop.index }}">{{ block.settings.title }}</button>
-    {% endfor %}
-  </div>
+{{ 'section-tab-collection-list.css' | asset_url | stylesheet_tag }}
 
-  {% for block in section.blocks %}
-    <div class="tab-content {% if forloop.first %}active{% endif %}" id="tab{{ forloop.index }}">
-      <ul class="{{ section.id }}-col4">
-        {% assign collection = collections[block.settings.collection] %}
-        {% for product in collection.products limit: 8 %}
-          {% render 'card-product', card_product: product, section_id: section.id %}
+<section>
+  <div class="page-width">
+    <div class="tabs">
+      <div class="tab-buttons">
+        {% for block in section.blocks %}
+          <button class="tab-button {% if forloop.first %}active{% endif %}" data-tab="tab{{ forloop.index }}">{{ block.settings.title }}</button>
         {% endfor %}
-      </ul>
+      </div>
+
+      {% for block in section.blocks %}
+        <div class="tab-content {% if forloop.first %}active{% endif %}" id="tab{{ forloop.index }}">
+          <ul class="tab-content-list">
+            {% assign collection = collections[block.settings.collection] %}
+            {% for product in collection.products limit: 8 %}
+              {% render 'card-product', card_product: product, section_id: section.id %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
     </div>
-  {% endfor %}
-</div>
+  </div>
+</section>
 
-<style>
-.tab-buttons {
-  display: flex;
-  gap: 8px;
-}
 
-.tab-button {
-  padding: 8px 16px;
-  cursor: pointer;
-}
-
-.tab-content {
-  display: none;
-  margin-top: 16px;
-}
-
-.tab-content.active {
-  display: block;
-}
-</style>
-
-<script>
-  function initTabs() {
-    document.querySelectorAll('.tabs').forEach(tab => {
-      const buttons = tab.querySelectorAll('.tab-button');
-      const contents = tab.querySelectorAll('.tab-content');
-
-      buttons.forEach(button => {
-        button.addEventListener('click', () => {
-          const target = button.dataset.tab;
-
-          buttons.forEach(b => b.classList.remove('active'));
-          contents.forEach(c => c.classList.remove('active'));
-
-          button.classList.add('active');
-          tab.querySelector('#' + target).classList.add('active');
-        });
-      });
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', initTabs);
-  document.addEventListener('shopify:section:load', initTabs);
-</script>
+<script src="{{ 'section-tab-collection-list.js' | asset_url }}" defer></script>
 
 {% schema %}
 {
