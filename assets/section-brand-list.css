@@ -1,0 +1,35 @@
+.section-brand-list {
+  background: #1b1b1b;
+}
+.brand-list {
+  display: grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+.brand-list li {
+  position: relative;
+}
+.brand-list-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  transform: translate(-50%, -50%);
+}
+.brand-list-name small {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .brand-list {
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+  .brand-list-name {
+    padding: 4px 0;
+  }
+}

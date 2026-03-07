@@ -1,35 +1,42 @@
-<section>
-  <ul class="brand-list">
-    {% for block in section.blocks %}
-      {% if block.settings.img_pc != blank %}
-        <li {{ block.shopify_attributes }}>
-          {% if block.settings.url != blank %}
-            <a href="{{ block.settings.url }}">
-          {% endif %}
+{{ 'section-brand-list.css' | asset_url | stylesheet_tag }}
 
-          <picture>
-            {% if block.settings.img_sp != blank %}
-              <source media="(max-width: 768px)" srcset="{{ block.settings.img_sp | image_url }}">
+<section class="section-brand-list">
+  <div class="page-width">
+    <ul class="brand-list">
+      {% for block in section.blocks %}
+        {% if block.settings.img_pc != blank %}
+          <li {{ block.shopify_attributes }}>
+            {% if block.settings.url != blank %}
+              <a href="{{ block.settings.url }}">
             {% endif %}
 
-            <img
-              src="{{ block.settings.img_pc | image_url }}"
-              alt="{{ block.settings.alt }}"
-              width="100%"
-              height="auto"
-              loading="lazy"
-            >
-          </picture>
+            <picture>
+              {% if block.settings.img_sp != blank %}
+                <source media="(max-width: 768px)" srcset="{{ block.settings.img_sp | image_url }}">
+              {% endif %}
 
-          <p class="brand-list-name">{{ block.settings.name }}</p>
+              <img
+                src="{{ block.settings.img_pc | image_url }}"
+                alt="{{ block.settings.alt }}"
+                width="100%"
+                height="auto"
+                loading="lazy"
+              >
+            </picture>
 
-          {% if block.settings.url != blank %}
-            </a>
-          {% endif %}
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+            <div class="brand-list-name">
+              <p>{{ block.settings.name_en }}</p>
+              <small>{{ block.settings.name_jp }}</small>
+            </div>
+
+            {% if block.settings.url != blank %}
+              </a>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 </section>
 
 {% schema %}
@@ -63,7 +70,12 @@
         },
         {
           "type": "textarea",
-          "id": "name",
+          "id": "name_en",
+          "label": "ブランドネーム"
+        },
+        {
+          "type": "textarea",
+          "id": "name_jp",
           "label": "ブランドネーム"
         },
       ]

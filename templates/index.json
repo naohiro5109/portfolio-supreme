@@ -423,7 +423,8 @@
             "img_pc": "shopify://shop_images/brand1.jpg",
             "img_sp": "shopify://shop_images/brand1_sp.jpg",
             "alt": "ブランド画像1",
-            "name": "NIKE ナイキ"
+            "name_en": "NIKE",
+            "name_jp": "ナイキ"
           }
         },
         "block_2": {
@@ -433,7 +434,8 @@
             "img_pc": "shopify://shop_images/brand2.jpg",
             "img_sp": "shopify://shop_images/brand2_sp.jpg",
             "alt": "ブランド画像2",
-            "name": "The North Face ノースフェイス"
+            "name_en": "The North Face",
+            "name_jp": "ノースフェイス"
           }
         },
         "block_3": {
@@ -443,7 +445,8 @@
             "img_pc": "shopify://shop_images/brand3.jpg",
             "img_sp": "shopify://shop_images/brand3_sp.jpg",
             "alt": "ブランド画像3",
-            "name": "New Era ニューエラ"
+            "name_en": "New Era",
+            "name_jp": "ニューエラ"
           }
         },
         "block_4": {
@@ -453,7 +456,8 @@
             "img_pc": "shopify://shop_images/brand4.jpg",
             "img_sp": "shopify://shop_images/brand4_sp.jpg",
             "alt": "ブランド画像4",
-            "name": "VANS ヴァンズ"
+            "name_en": "VANS",
+            "name_jp": "ヴァンズ"
           }
         },
         "block_5": {
@@ -463,7 +467,8 @@
             "img_pc": "shopify://shop_images/brand5.jpg",
             "img_sp": "shopify://shop_images/brand5_sp.jpg",
             "alt": "ブランド画像5",
-            "name": "HYSTERIC GLAMOUR ヒステリックグラマー"
+            "name_en": "HYSTERIC GLAMOUR",
+            "name_jp": "ヒステリックグラマー"
           }
         },
         "block_6": {
@@ -473,7 +478,8 @@
             "img_pc": "shopify://shop_images/brand6.jpg",
             "img_sp": "shopify://shop_images/brand6_sp.jpg",
             "alt": "ブランド画像6",
-            "name": "Others その他コラボアイテム"
+            "name_en": "Others",
+            "name_jp": "その他コラボアイテム"
           }
         }
       },
