@@ -1,0 +1,12 @@
+.banner-list {
+  display: grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .banner-list {
+    grid-template-columns:repeat(1, minmax(0, 1fr));
+    gap: 15px;
+  }
+}
