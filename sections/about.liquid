@@ -1,37 +1,41 @@
-<section>
-  <div class="about-wrap">
-    <picture>
-      {% if section.settings.img_sp != blank %}
-        <source media="(max-width: 768px)" srcset="{{ section.settings.img_sp | image_url }}">
-      {% endif %}
+{{ 'section-about.css' | asset_url | stylesheet_tag }}
 
-      <img
-        src="{{ section.settings.img_pc | image_url }}"
-        alt="{{ section.settings.alt }}"
-        width="100%"
-        height="auto"
-        loading="lazy"
-      >
-    </picture>
-    <div class="about-cont">
-      <p class="about-cont-head">{{ section.settings.head }}</p>
-      <ul class="about-sns">
-        {% for block in section.blocks %}
-          {% if block.settings.url != blank %}
-            <li {{ block.shopify_attributes }}>
-              <a href="{{ block.settings.url }}" target="_blank">
-                {% case block.settings.icon %}
-                  {% when 'instagram' %}
-                    {% render 'icon-instagram' %}
-                  {% when 'x' %}
-                    {% render 'icon-x' %}
-                {% endcase %}
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-      <p class="about-cont-text">{{ section.settings.text }}</p>
+<section class="section-about">
+  <div class="page-width">
+    <div class="about">
+      <picture>
+        {% if section.settings.img_sp != blank %}
+          <source media="(max-width: 768px)" srcset="{{ section.settings.img_sp | image_url }}">
+        {% endif %}
+
+        <img
+          src="{{ section.settings.img_pc | image_url }}"
+          alt="{{ section.settings.alt }}"
+          width="100%"
+          height="auto"
+          loading="lazy"
+        >
+      </picture>
+      <div class="about-cont">
+        <p class="about-cont-head">{{ section.settings.head }}</p>
+        <ul class="about-sns">
+          {% for block in section.blocks %}
+            {% if block.settings.url != blank %}
+              <li {{ block.shopify_attributes }}>
+                <a href="{{ block.settings.url }}" target="_blank">
+                  {% case block.settings.icon %}
+                    {% when 'instagram' %}
+                      {% render 'icon-instagram' %}
+                    {% when 'x' %}
+                      {% render 'icon-x' %}
+                  {% endcase %}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <p class="about-cont-text">{{ section.settings.text }}</p>
+      </div>
     </div>
   </div>
 </section>
