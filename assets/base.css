@@ -3595,3 +3595,15 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+/* 追加 */
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+picture img {
+  display: block;
+}
