@@ -1,21 +1,25 @@
-<section>
-  <ul class="season-list">
-    {% for block in section.blocks %}
-      {% if block.settings.text != blank %}
-        <li {{ block.shopify_attributes }}>
-          {% if block.settings.url != blank %}
-            <a href="{{ block.settings.url }}" class="season-list-button">
-          {% endif %}
+{{ 'section-season-list.css' | asset_url | stylesheet_tag }}
 
-          {{ block.settings.text }}
+<section class="section-season-list">
+  <div class="page-width">
+    <ul class="season-list">
+      {% for block in section.blocks %}
+        {% if block.settings.text != blank %}
+          <li {{ block.shopify_attributes }}>
+            {% if block.settings.url != blank %}
+              <a href="{{ block.settings.url }}" class="season-list-button">
+            {% endif %}
 
-          {% if block.settings.url != blank %}
-            </a>
-          {% endif %}
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+            {{ block.settings.text }}
+
+            {% if block.settings.url != blank %}
+              </a>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 </section>
 
 {% schema %}

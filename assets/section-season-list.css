@@ -1,0 +1,31 @@
+.section-season-list {
+  background: #1b1b1b;
+}
+.season-list {
+  display: grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.season-list li {
+  position: relative;
+  padding: 10px 30px 10px 10px;
+  background: #fff;
+}
+.season-list li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #1b1b1b;
+  border-right: 2px solid #1b1b1b;
+  transform: rotate(45deg) translateY(-50%);
+}
+@media screen and (max-width: 767px) {
+  .season-list {
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+}

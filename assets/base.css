@@ -3609,6 +3609,7 @@ picture img {
 }
 a {
   color: #1b1b1b;
+  text-decoration: none;
 }
 p {
   margin: 0;
