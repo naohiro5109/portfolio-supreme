@@ -9,80 +9,69 @@
  */
 {
   "sections": {
-    "slideshow_kKVcpE": {
-      "type": "slideshow",
+    "main-slider": {
+      "type": "main-slider",
       "blocks": {
-        "slide_QRB6YU": {
-          "type": "slide",
+        "slide_1": {
+          "type": "slide_block",
           "settings": {
-            "image": "shopify://shop_images/mv1.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
+            "url": "https://be-supremer.com/c/category/sweatshirt-crewneck",
+            "img_pc": "shopify://shop_images/mv1.jpg",
+            "img_sp": "shopify://shop_images/mv1_sp.jpg",
+            "alt": "スライド画像",
+            "head": "スウェット特集"
           }
         },
-        "slide_4FHJAT": {
-          "type": "slide",
+        "slide_2": {
+          "type": "slide_block",
           "settings": {
-            "image": "shopify://shop_images/mv2.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
+            "url": "https://be-supremer.com/c/category",
+            "img_pc": "shopify://shop_images/mv2.jpg",
+            "img_sp": "shopify://shop_images/mv2_sp.jpg",
+            "alt": "スライド画像",
+            "head": "人気ランキング"
           }
         },
-        "slide_9KfETJ": {
-          "type": "slide",
+        "slide_3": {
+          "type": "slide_block",
           "settings": {
-            "image": "shopify://shop_images/mv3.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-1"
+            "url": "https://be-supremer.com/c/category/shoes-boots",
+            "img_pc": "shopify://shop_images/mv3.jpg",
+            "img_sp": "shopify://shop_images/mv3_sp.jpg",
+            "alt": "スライド画像",
+            "head": "スニーカー特集"
           }
-        }
+        },
+        "slide_4": {
+          "type": "slide_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/category/cap-hat",
+            "img_pc": "shopify://shop_images/mv4.jpg",
+            "img_sp": "shopify://shop_images/mv4_sp.jpg",
+            "alt": "スライド画像",
+            "head": "帽子・小物特集"
+          }
+        },
+        "slide_5": {
+          "type": "slide_block",
+          "settings": {
+            "url": "https://be-supremer.com/c/category/search?sort=latest",
+            "img_pc": "shopify://shop_images/mv5.png",
+            "img_sp": "shopify://shop_images/mv5_sp.png",
+            "alt": "スライド画像",
+            "head": "新着商品"
+          }
+        },
       },
       "block_order": [
-        "slide_QRB6YU",
-        "slide_4FHJAT",
-        "slide_9KfETJ"
+        "slide_1",
+        "slide_2",
+        "slide_3",
+        "slide_4",
+        "slide_5",
+        "slide_6"
       ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
+      "settings": {}
     },
     "new-products": {
       "type": "featured-collection",
@@ -673,7 +662,7 @@
     },
   },
   "order": [
-    "slideshow_kKVcpE",
+    "main-slider",
     "new-products",
     "featured_articles",
     "collaboration-ranking-items",

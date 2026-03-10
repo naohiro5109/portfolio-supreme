@@ -1,0 +1,111 @@
+{{ 'section-main-slider.css' | asset_url | stylesheet_tag }}
+
+<section class="main-slider">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide" {{ block.shopify_attributes }}>
+          {% if block.settings.url != blank %}
+            <a href="{{ block.settings.url }}">
+          {% endif %}
+
+          <picture>
+            {% if block.settings.img_sp != blank %}
+              <source media="(max-width: 767px)" srcset="{{ block.settings.img_sp | image_url }}">
+            {% endif %}
+
+            {% if block.settings.img_pc != blank %}
+              <img
+                src="{{ block.settings.img_pc | image_url }}"
+                alt="{{ block.settings.alt }}"
+                width="100%"
+                height="auto"
+                loading="lazy"
+              >
+            {% endif %}
+          </picture>
+
+          {% if block.settings.head != blank %}
+            <p class="slide-head"><span>{{ block.settings.head }}</span></p>
+          {% endif %}
+
+          {% if block.settings.url != blank %}
+            </a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.main-slider .swiper', {
+      slidesPerView: 2.4,
+      centeredSlides: true,
+      spaceBetween: 15,
+      loop: true,
+      autoplay: true,
+
+      pagination: {
+        el: '.main-slider .swiper-pagination',
+        clickable: true,
+      },
+
+      breakpoints:{
+        994: {
+          slidesPerView: 2.8,
+          spaceBetween: 30
+        }
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "メインスライダー",
+  "tag": "section",
+  "class": "shopify-main-slider",
+  "max_blocks": 10,
+  "blocks": [
+    {
+      "type": "slide_block",
+      "name": "スライド",
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "スライドURL"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_pc",
+          "label": "スライド画像"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_sp",
+          "label": "スライド画像"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "スライド画像代替テキスト"
+        },
+        {
+          "type": "textarea",
+          "id": "head",
+          "label": "スライド見出し"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "メインスライダー",
+    }
+  ]
+}
+{% endschema %}
