@@ -5,7 +5,8 @@
     <div class="tabs">
       <div class="tab-buttons">
         {% for block in section.blocks %}
-          <button class="tab-button {% if forloop.first %}active{% endif %}" data-tab="tab{{ forloop.index }}">{{ block.settings.title }}</button>
+          {% assign collection = collections[block.settings.collection] %}
+          <button class="tab-button {% if forloop.first %}active{% endif %}" data-tab="tab{{ forloop.index }}">{{ collection.title }}</button>
         {% endfor %}
       </div>
 
@@ -13,7 +14,7 @@
         <div class="tab-content {% if forloop.first %}active{% endif %}" id="tab{{ forloop.index }}">
           <ul class="tab-content-list">
             {% assign collection = collections[block.settings.collection] %}
-            {% for product in collection.products limit: 8 %}
+            {% for product in collection.products limit: 10 %}
               {% render 'card-product', card_product: product, section_id: section.id %}
             {% endfor %}
           </ul>

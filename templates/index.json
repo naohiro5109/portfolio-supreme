@@ -136,29 +136,53 @@
         "tab_1": {
           "type": "tab_block",
           "settings": {
-            "title": "tab1",
-            "collection": "recommend-items"
+            "title": "",
+            "collection": "nike"
           }
         },
         "tab_2": {
           "type": "tab_block",
           "settings": {
-            "title": "tab2",
-            "collection": "all-items"
+            "title": "",
+            "collection": "north-face"
           }
         },
         "tab_3": {
           "type": "tab_block",
           "settings": {
-            "title": "tab3",
-            "collection": "frontpage"
+            "title": "",
+            "collection": "new-era"
+          }
+        },
+        "tab_4": {
+          "type": "tab_block",
+          "settings": {
+            "title": "",
+            "collection": "vans"
+          }
+        },
+        "tab_5": {
+          "type": "tab_block",
+          "settings": {
+            "title": "",
+            "collection": "hysteric-glamour"
+          }
+        },
+        "tab_6": {
+          "type": "tab_block",
+          "settings": {
+            "title": "",
+            "collection": "others"
           }
         }
       },
       "block_order": [
         "tab_1",
         "tab_2",
-        "tab_3"
+        "tab_3",
+        "tab_4",
+        "tab_5",
+        "tab_6"
       ],
       "settings": {
         "title": "見出し"
