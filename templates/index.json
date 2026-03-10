@@ -78,7 +78,7 @@
       "settings": {
         "collection": "all",
         "products_to_show": 10,
-        "title": "Featured products",
+        "title": "新着商品",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
