@@ -634,7 +634,83 @@
         "article_show_author": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
+      },
+      "blocks": {
+        "block_1": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "2026SS"
+          }
+        },
+        "block_2": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "2025AW"
+          }
+        },
+        "block_3": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "2025SS"
+          }
+        },
+        "block_4": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "Tシャツ・ロングスリーブ"
+          }
+        },
+        "block_5": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "キャップ・ハット"
+          }
+        },
+        "block_6": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "パーカー・クルーネック"
+          }
+        },
+        "block_7": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "ショルダー・ウエストバッグ"
+          }
+        },
+        "block_8": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "ボックスロゴ"
+          }
+        },
+        "block_9": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "ブラックスウェット"
+          }
+        },
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3",
+        "block_4",
+        "block_5",
+        "block_6",
+        "block_7",
+        "block_8",
+        "block_9"
+      ]
     },
     "about": {
       "type": "about",

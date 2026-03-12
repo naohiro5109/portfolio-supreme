@@ -66,7 +66,7 @@
 {% paginate search.results by 24 %}
   <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
     <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      <h1 class="h2 center">
+      <h1 class="h2 center search-heading">
         {%- if search.performed -%}
           {{- 'templates.search.title' | t -}}
         {%- else -%}
@@ -126,11 +126,24 @@
                 </span>
               </button>
             </div>
+            <button type="submit" class="search-text-button">詳しく検索</button>
           </form>
         </main-search>
         {%- if settings.predictive_search_enabled -%}
           </predictive-search>
         {%- endif -%}
+
+        <div class="keywords">
+          <p class="keywords-heading">人気ワード</p>
+          <ul class="keywords-list">
+            {% for block in section.blocks %}
+              <a href="{{ block.settings.url }}">
+                {{ block.settings.text }}
+              </a>
+            {% endfor %}
+          </ul>
+        </div>
+
       </div>
       {%- if search.performed -%}
         {%- unless section.settings.enable_filtering or section.settings.enable_sorting -%}
@@ -523,6 +536,24 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "keyword_block",
+      "name": "人気ワード",
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "人気ワードURL"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "人気ワード"
+        }
+      ]
     }
   ]
 }

@@ -72,3 +72,42 @@ input::-webkit-search-decoration {
 .template-search__results {
   position: relative;
 }
+
+.template-search {
+  background: #F4F4F4;
+}
+.template-search .template-search__header {
+  margin-bottom: 0;
+}
+.search-heading {
+  display: none;
+}
+.search {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.search-text-button {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 13px 0px;
+  width: 184px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff !important;
+  border-radius: 0;
+  background: #1B1B1B;
+  border: none;
+}
+.keywords {
+  display: flex;
+  gap: 10px;
+}
+.keywords-heading {
+  font-size: 14px;
+}
+.keywords-list {
+  font-size: 10px;
+}
