@@ -58,3 +58,37 @@
     }
   }
 }
+
+.blog .grid {
+  display: grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+.blog .blog__post {
+  max-width: 100%;
+  width: 100%;
+}
+.blog__title-wrap {
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.blog__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.blog .card__information {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: #000;
+}
+.blog .card__heading {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+.blog .article-card__info {
+  display: none;
+  padding: 0;
+}

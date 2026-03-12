@@ -107,7 +107,7 @@
       "settings": {
         "blog": "featured-articles",
         "post_limit": 3,
-        "heading": "Blog posts",
+        "heading": "特集",
         "heading_size": "h1",
         "columns_desktop": 3,
         "show_view_all": true,

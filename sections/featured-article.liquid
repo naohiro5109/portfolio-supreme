@@ -1,0 +1,60 @@
+<section>
+  {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
+    {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
+      <li>
+        {% render 'article-card',
+          blog: section.settings.blog,
+          article: article,
+          media_aspect_ratio: 1.66,
+          show_image: section.settings.show_image,
+          show_excerpt: true
+        %}
+      </li>
+    {% endfor %}
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "特集",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "article_block",
+      "name": "記事",
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "記事サムネイルURL"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_pc",
+          "label": "記事サムネイル画像(PC)"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_sp",
+          "label": "記事サムネイル画像(SP)"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "記事サムネイル画像代替テキスト"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "記事タイトル"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "特集"
+    }
+  ]
+}
+{% endschema %}
