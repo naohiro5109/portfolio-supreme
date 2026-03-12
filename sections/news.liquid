@@ -1,0 +1,52 @@
+{{ 'section-news.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.blog != blank %}
+  {% assign blog = blogs[section.settings.blog] %}
+
+  <section class="news">
+    <h2 class="news-title">{{ section.settings.heading }}</h2>
+    <ul class="news-list page-width">
+      {% for article in blog.articles limit: section.settings.post_limit %}
+        <li>
+          <a href="{{ article.url }}" class="news-list-text">
+            <p class="news-list-date">{{ article.published_at | date: "%Y.%m.%d" }}</p>
+            <p class="news-list-title">{{ article.title }}</p>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "ニュース一覧",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "見出し"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "表示するブログ"
+    },
+    {
+      "type": "range",
+      "id": "post_limit",
+      "label": "表示件数",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "ニュース一覧"
+    }
+  ]
+}
+{% endschema %}

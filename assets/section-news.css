@@ -1,0 +1,44 @@
+.news {
+  padding: 30px 0;
+  background: #F4F4F4;
+}
+.news-title {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  width: 174px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  background: #333;
+}
+.news-list li {
+  border-bottom: 1px solid #333;
+}
+.news-list li:first-child {
+  border-top: 1px solid #333;
+}
+.news-list-text {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0 10px 63px;
+  font-weight: 700;
+}
+.news-list-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 767px) {
+  .news-title {
+    margin-bottom: 15px;
+    padding: 4px 0;
+    width: 100px;
+    font-size: 12px;
+  }
+  .news-list-text {
+    display: block;
+    padding: 6px 0;
+    font-size: 12px;
+  }
+}
