@@ -125,42 +125,36 @@
         "tab_1": {
           "type": "tab_block",
           "settings": {
-            "title": "",
             "collection": "nike"
           }
         },
         "tab_2": {
           "type": "tab_block",
           "settings": {
-            "title": "",
             "collection": "north-face"
           }
         },
         "tab_3": {
           "type": "tab_block",
           "settings": {
-            "title": "",
             "collection": "new-era"
           }
         },
         "tab_4": {
           "type": "tab_block",
           "settings": {
-            "title": "",
             "collection": "vans"
           }
         },
         "tab_5": {
           "type": "tab_block",
           "settings": {
-            "title": "",
             "collection": "hysteric-glamour"
           }
         },
         "tab_6": {
           "type": "tab_block",
           "settings": {
-            "title": "",
             "collection": "others"
           }
         }
@@ -184,33 +178,88 @@
         "tab_1": {
           "type": "tab_block",
           "settings": {
-            "title": "tab1",
-            "collection": "recommend-items"
+            "collection": "all-items"
           }
         },
         "tab_2": {
           "type": "tab_block",
           "settings": {
-            "title": "tab2",
             "collection": "all-items"
           }
         },
         "tab_3": {
           "type": "tab_block",
           "settings": {
-            "title": "tab3",
-            "collection": "frontpage"
+            "collection": "trainer"
+          }
+        },
+        "tab_4": {
+          "type": "tab_block",
+          "settings": {
+            "collection": "outer"
+          }
+        },
+        "tab_5": {
+          "type": "tab_block",
+          "settings": {
+            "collection": "cap"
+          }
+        },
+        "tab_6": {
+          "type": "tab_block",
+          "settings": {
+            "collection": "knit"
+          }
+        },
+        "tab_7": {
+          "type": "tab_block",
+          "settings": {
+            "collection": "backpack"
+          }
+        },
+        "tab_8": {
+          "type": "tab_block",
+          "settings": {
+            "collection": "others-bag"
+          }
+        },
+        "tab_9": {
+          "type": "tab_block",
+          "settings": {
+            "collection": "sneaker"
+          }
+        },
+        "tab_10": {
+          "type": "tab_block",
+          "settings": {
+            "collection": "pants"
+          }
+        },
+        "tab_11": {
+          "type": "tab_block",
+          "settings": {
+            "collection": "accessory"
           }
         }
       },
       "block_order": [
         "tab_1",
         "tab_2",
-        "tab_3"
+        "tab_3",
+        "tab_4",
+        "tab_5",
+        "tab_6",
+        "tab_7",
+        "tab_8",
+        "tab_9",
+        "tab_10",
+        "tab_11",
+        "tab_12"
       ],
       "settings": {
         "section_title": "今週の人気ランキング",
         "title": "見出し",
+        "columns_pc": 6,
         "button_text": "商品一覧を見る",
         "button_color": "white"
       }

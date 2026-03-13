@@ -1,6 +1,57 @@
 {{ 'section-tab-collection-list.css' | asset_url | stylesheet_tag }}
 
-<section class="collection">
+<style>
+#section-{{ section.id }} .tab-buttons {
+  display: grid;
+  grid-template-columns: repeat({{ section.settings.columns_sp }}, minmax(0, 1fr));
+}
+#section-{{ section.id }} .is-hidden {
+  display: none;
+}
+#section-{{ section.id }} .more-btn-wrap {
+  text-align: center;
+  margin-top: 40px;
+}
+#section-{{ section.id }} .more-btn-wrap + .collection__view-all {
+  margin-top: 40px;
+}
+#section-{{ section.id }} .more-btn-wrap + .collection__view-all > .button {
+  margin-top: 0;
+}
+#section-{{ section.id }} .more-btn {
+  position: relative;
+  padding: 8px 30px;
+  width: 270px;
+  min-height: 47px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1B1B1B;
+  background: #fff;
+  border: 1px solid #1B1B1B;
+  box-shadow: none;
+}
+#section-{{ section.id }} .more-btn::before,
+#section-{{ section.id }} .more-btn::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background: #1b1b1b;
+  transform: translateY(-50%);
+}
+#section-{{ section.id }} .more-btn::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+@media(min-width: 767px) {
+  #section-{{ section.id }} .tab-buttons {
+    grid-template-columns: repeat({{ section.settings.columns_pc }}, minmax(0, 1fr));
+  }
+}
+</style>
+
+<section id="section-{{ section.id }}" class="collection">
   <div class="page-width">
     {% render 'title', section_title: 'section_title' %}
 
@@ -8,28 +59,55 @@
       <div class="tab-buttons">
         {% for block in section.blocks %}
           {% assign collection = collections[block.settings.collection] %}
-          <button class="tab-button {% if forloop.first %}active{% endif %}" data-tab="tab{{ forloop.index }}">{{ collection.title }}</button>
+          <button class="tab-button {% if forloop.first %}active{% endif %}" data-tab="tab{{ forloop.index }}">
+            {{ collection.title }}
+          </button>
         {% endfor %}
       </div>
 
       {% for block in section.blocks %}
+        {% assign collection = collections[block.settings.collection] %}
         <div class="tab-content {% if forloop.first %}active{% endif %}" id="tab{{ forloop.index }}">
           <ul class="tab-content-list">
-            {% assign collection = collections[block.settings.collection] %}
-            {% for product in collection.products limit: 10 %}
-              {% render 'card-product', card_product: product, section_id: section.id %}
+            {% for product in collection.products limit: 30 %}
+              <li class="product-item {% if forloop.index > 10 %}is-hidden{% endif %}">
+                {% render 'card-product', card_product: product, section_id: section.id %}
+              </li>
             {% endfor %}
           </ul>
+          {% if collection.products.size > 10 %}
+            <div class="more-btn-wrap center collection__view-all">
+              <button class="more-btn">ランキングをもっと見る</button>
+            </div>
+          {% endif %}
+
+          <div class="center collection__view-all">
+            {% assign collection = collections[section.blocks.settings.collection] %}
+            <a href="{{ collection.url }}" class="button button--{{ section.settings.button_color }}">{{ section.settings.button_text }}</a>
+          </div>
         </div>
       {% endfor %}
     </div>
-
-    <div class="center collection__view-all">
-      {% assign collection = collections[section.blocks.settings.collection] %}
-      <a href="{{ collection.url }}" class="button button--{{ section.settings.button_color }}">{{ section.settings.button_text }}</a>
-    </div>
   </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const section = document.querySelector('#section-{{ section.id }}');
+
+  section.querySelectorAll('.more-btn').forEach(btn => {
+    btn.addEventListener('click', function(){
+      const tabContent = btn.closest('.tab-content');
+      const hiddenItems = tabContent.querySelectorAll('.product-item.is-hidden');
+
+      hiddenItems.forEach(item => {
+        item.classList.remove('is-hidden');
+      });
+      btn.style.display = 'none';
+    });
+  });
+});
+</script>
 
 
 <script src="{{ 'section-tab-collection-list.js' | asset_url }}" defer></script>
@@ -48,6 +126,24 @@
       "id": "title",
       "label": "タイトル",
       "default": "見出し"
+    },
+    {
+      "type": "range",
+      "id": "columns_pc",
+      "label": "PCカラム数",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "columns_sp",
+      "label": "SPカラム数",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
     },
     {
       "type": "select",
