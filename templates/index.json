@@ -174,6 +174,7 @@
         "tab_6"
       ],
       "settings": {
+        "section_title": "ブランドコラボレーション人気ランキング",
         "title": "見出し"
       }
     },
@@ -208,6 +209,7 @@
         "tab_3"
       ],
       "settings": {
+        "section_title": "今週の人気ランキング",
         "title": "見出し"
       }
     },
@@ -254,7 +256,7 @@
       "settings": {
         "collection": "recommend-items",
         "products_to_show": 10,
-        "title": "Featured products",
+        "title": "おすすめ商品",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -413,7 +415,9 @@
         "block_10",
         "block_11",
       ],
-      "settings": {}
+      "settings": {
+        "section_title": "CATEGORY"
+      }
     },
     "brand-list": {
       "type": "brand-list",
@@ -493,7 +497,9 @@
         "block_5",
         "block_6"
       ],
-      "settings": {}
+      "settings": {
+        "section_title": "BRAND"
+      }
     },
     "season-list": {
       "type": "season-list",
@@ -605,7 +611,9 @@
         "block_12",
         "block_13",
       ],
-      "settings": {}
+      "settings": {
+        "section_title": "SEASON"
+      }
     },
     "main-search": {
       "type": "main-search",

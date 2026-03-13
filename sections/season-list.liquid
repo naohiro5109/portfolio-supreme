@@ -2,6 +2,8 @@
 
 <section class="section-season-list">
   <div class="page-width">
+    {% render 'title', color: 'white', section_title: 'section_title' %}
+
     <ul class="season-list">
       {% for block in section.blocks %}
         {% if block.settings.text != blank %}
@@ -25,7 +27,13 @@
 {% schema %}
 {
   "name": "シーズンリスト",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "セクションタイトル",
+    },
+  ],
   "blocks": [
     {
       "type": "season_block",

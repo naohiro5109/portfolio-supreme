@@ -2,6 +2,8 @@
 
 <section class="section-brand-list">
   <div class="page-width">
+    {% render 'title', color: 'white', section_title: 'section_title' %}
+
     <ul class="brand-list">
       {% for block in section.blocks %}
         {% if block.settings.img_pc != blank %}
@@ -42,7 +44,13 @@
 {% schema %}
 {
   "name": "ブランドリスト",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "セクションタイトル"
+    }
+  ],
   "blocks": [
     {
       "type": "brand_block",

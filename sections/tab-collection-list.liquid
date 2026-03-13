@@ -2,6 +2,8 @@
 
 <section class="collection">
   <div class="page-width">
+    {% render 'title', section_title: 'section_title' %}
+
     <div class="tabs">
       <div class="tab-buttons">
         {% for block in section.blocks %}
@@ -31,6 +33,11 @@
 {
   "name": "タブメニュー商品リスト",
   "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "セクションタイトル",
+    },
     {
       "type": "text",
       "id": "title",

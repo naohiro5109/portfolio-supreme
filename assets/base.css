@@ -3617,6 +3617,9 @@ a {
 p {
   margin: 0;
 }
+h2 {
+  margin: 0;
+}
 
 .title {
   text-align: center;

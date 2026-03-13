@@ -2,6 +2,8 @@
 
 <section class="section-category-list">
   <div class="page-width">
+    {% render 'title', color: 'white', section_title: 'section_title' %}
+
     <ul class="category-list">
       {% for block in section.blocks %}
         {% if block.settings.img_pc != blank %}
@@ -40,7 +42,13 @@
 {% schema %}
 {
   "name": "カテゴリーリスト",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "セクションタイトル"
+    }
+  ],
   "blocks": [
     {
       "type": "category_block",
