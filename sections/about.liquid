@@ -35,6 +35,9 @@
           {% endfor %}
         </ul>
         <p class="about-cont-text">{{ section.settings.text }}</p>
+        <div class="center collection__view-all">
+          <a href="{{ section.settings.button_url }}" class="button button--{{ section.settings.button_color }}">{{ section.settings.button_text }}</a>
+        </div>
       </div>
     </div>
   </div>
@@ -78,6 +81,27 @@
       "type": "textarea",
       "id": "text",
       "label": "サイト紹介テキスト"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "ボタンURL"
+    },
+    {
+      "type": "select",
+      "id": "button_color",
+      "label": "ボタンカラー",
+      "options": [
+        { "value": "black", "label": "黒" },
+        { "value": "white", "label": "白" }
+      ],
+      "default": "black"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "ボタンテキスト",
+      "default": "もっと見る"
     }
   ],
   "blocks": [

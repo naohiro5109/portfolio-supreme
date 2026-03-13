@@ -23,6 +23,11 @@
         </div>
       {% endfor %}
     </div>
+
+    <div class="center collection__view-all">
+      {% assign collection = collections[section.blocks.settings.collection] %}
+      <a href="{{ collection.url }}" class="button button--{{ section.settings.button_color }}">{{ section.settings.button_text }}</a>
+    </div>
   </div>
 </section>
 
@@ -43,6 +48,22 @@
       "id": "title",
       "label": "タイトル",
       "default": "見出し"
+    },
+    {
+      "type": "select",
+      "id": "button_color",
+      "label": "ボタンカラー",
+      "options": [
+        { "value": "black", "label": "黒" },
+        { "value": "white", "label": "白" }
+      ],
+      "default": "black"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "ボタンテキスト",
+      "default": "もっと見る"
     }
   ],
   "blocks": [

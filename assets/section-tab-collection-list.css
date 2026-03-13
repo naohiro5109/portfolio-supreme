@@ -37,3 +37,17 @@
     gap: 10px;
   }
 }
+
+.button.button--white {
+  color: #1b1b1b;
+  background: transparent;
+  border: 1px solid #1b1b1b;
+}
+.button.button--white::after {
+  box-shadow: none;
+  border-top: 2px solid #1b1b1b;
+  border-right: 2px solid #1b1b1b;
+}
+.button.button--white:hover::after {
+  box-shadow: none;
+}
