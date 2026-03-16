@@ -73,6 +73,89 @@
       ],
       "settings": {}
     },
+    "top-search": {
+      "type": "top-search",
+      "name": "検索",
+      "settings": {
+        "show_pc": false
+      },
+      "blocks": {
+        "block_1": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "2026SS"
+          }
+        },
+        "block_2": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "2025AW"
+          }
+        },
+        "block_3": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "2025SS"
+          }
+        },
+        "block_4": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "Tシャツ・ロングスリーブ"
+          }
+        },
+        "block_5": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "キャップ・ハット"
+          }
+        },
+        "block_6": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "パーカー・クルーネック"
+          }
+        },
+        "block_7": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "ショルダー・ウエストバッグ"
+          }
+        },
+        "block_8": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "ボックスロゴ"
+          }
+        },
+        "block_9": {
+          "type": "keyword_block",
+          "settings": {
+            "url": "",
+            "text": "ブラックスウェット"
+          }
+        },
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3",
+        "block_4",
+        "block_5",
+        "block_6",
+        "block_7",
+        "block_8",
+        "block_9"
+      ]
+    },
     "new-products": {
       "type": "featured-collection",
       "settings": {
@@ -666,24 +749,11 @@
         "section_title": "SEASON"
       }
     },
-    "main-search": {
-      "type": "main-search",
-      "name": "t:sections.main-search.presets.name",
+    "footer-search": {
+      "type": "top-search",
+      "name": "検索",
       "settings": {
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_filtering": true,
-        "filter_type": "horizontal",
-        "enable_sorting": true,
-        "article_show_date": true,
-        "article_show_author": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "bg_color": "gray"
       },
       "blocks": {
         "block_1": {
@@ -790,6 +860,7 @@
   },
   "order": [
     "main-slider",
+    "top-search",
     "new-products",
     "featured_articles",
     "collaboration-ranking-items",
@@ -800,7 +871,7 @@
     "category-list",
     "brand-list",
     "season-list",
-    "main-search",
+    "footer-search",
     "about"
   ]
 }

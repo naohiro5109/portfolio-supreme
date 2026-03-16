@@ -1,0 +1,101 @@
+{{ 'section-top-search.css' | asset_url | stylesheet_tag }}
+
+<section id="section-{{ section.id }}" class="product-search {% unless section.settings.show_pc %}hide-pc{% endunless %} {% unless section.settings.show_sp %}hide-sp{% endunless %} bg-color--{{ section.settings.bg_color }}">
+  <div class="page-width">
+    <form action="{{ routes.search_url }}" method="get" role="search" class="product-search-form">
+      <div class="search-input-wrapper">
+        <input
+          type="search"
+          name="q"
+          placeholder="商品を検索する"
+          class="product-search-input"
+        >
+        <button type="submit" class="search-icon-btn">
+          <span class="material-icons">search</span>
+        </button>
+      </div>
+      <button type="submit" class="product-search-button">詳しく検索</button>
+      <input type="hidden" name="type" value="product">
+    </form>
+
+    <div class="keywords">
+      <p class="keywords-heading">人気ワード</p>
+      <ul class="keywords-list">
+        {% for block in section.blocks %}
+          <li>
+            <a href="{{ block.settings.url }}">
+              {{ block.settings.text }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+#section-{{ section.id }}.bg-color--white {
+  background: #fff;
+}
+#section-{{ section.id }}.bg-color--gray {
+  background: #F4F4F4;
+}
+</style>
+
+{% schema %}
+{
+  "name": "商品検索",
+  "settings":[
+    {
+      "type": "checkbox",
+      "id": "show_pc",
+      "label": "PCで表示",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sp",
+      "label": "スマホで表示",
+      "default": true
+    },
+    {
+      "type": "radio",
+      "id": "bg_color",
+      "label": "背景色",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "gray",
+          "label": "グレー"
+        }
+      ],
+    }
+  ],
+  "blocks": [
+    {
+      "type": "keyword_block",
+      "name": "人気ワード",
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "人気ワードURL"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "人気ワード"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"商品検索"
+    }
+  ]
+}
+{% endschema %}

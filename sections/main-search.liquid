@@ -133,17 +133,6 @@
           </predictive-search>
         {%- endif -%}
 
-        <div class="keywords">
-          <p class="keywords-heading">人気ワード</p>
-          <ul class="keywords-list">
-            {% for block in section.blocks %}
-              <a href="{{ block.settings.url }}">
-                {{ block.settings.text }}
-              </a>
-            {% endfor %}
-          </ul>
-        </div>
-
       </div>
       {%- if search.performed -%}
         {%- unless section.settings.enable_filtering or section.settings.enable_sorting -%}
