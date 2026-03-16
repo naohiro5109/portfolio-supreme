@@ -92,6 +92,9 @@
   display: none;
   padding: 0;
 }
+.blog__button {
+  font-size: 14px;
+}
 
 @media screen and (min-width: 990px) {
   .blog .blog__post:nth-child(n+4) {
@@ -114,5 +117,9 @@
     margin-left: 0!important;
     max-width: 100%;
     width: 100%!important;
+  }
+  .blog__button {
+    margin-top: 0;
+    font-size: 12px;
   }
 }
