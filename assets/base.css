@@ -3670,6 +3670,9 @@ p {
     grid-template-columns:repeat(3, minmax(0, 1fr));
     gap: 15px 10px;
   }
+  .product-grid .grid__item:nth-child(n+10) {
+    display: none;
+  }
   .product-grid .card__heading {
     font-size: 12px;
     display: -webkit-box;
