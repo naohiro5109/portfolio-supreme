@@ -34,4 +34,7 @@
     width: 10px;
     height: 10px;
   }
+  .main-slider .swiper-pagination {
+    margin-top: 12px;
+  }
 }
