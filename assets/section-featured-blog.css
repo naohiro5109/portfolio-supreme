@@ -92,3 +92,27 @@
   display: none;
   padding: 0;
 }
+
+@media screen and (min-width: 990px) {
+  .blog .blog__post:nth-child(n+4) {
+    display: none;
+  }
+}
+@media screen and (max-width: 989px) {
+  .featured-blog-button {
+    display: none;
+  }
+  .blog .slider-buttons {
+    display: none;
+  }
+  .blog .blog__posts {
+    display: grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap: 30px 15px;
+  }
+  .blog .blog__post {
+    margin-left: 0!important;
+    max-width: 100%;
+    width: 100%!important;
+  }
+}
