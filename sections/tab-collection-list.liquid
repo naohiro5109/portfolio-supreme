@@ -60,7 +60,10 @@
         {% for block in section.blocks %}
           {% assign collection = collections[block.settings.collection] %}
           <button class="tab-button {% if forloop.first %}active{% endif %}" data-tab="tab{{ forloop.index }}">
-            {{ collection.title }}
+            {{ collection.title
+              | replace: ' / ', ' /<span class="sp-only-line-break"></span>'
+              | replace: '・', '・<span class="sp-only-line-break"></span>'
+            }}
           </button>
         {% endfor %}
       </div>
