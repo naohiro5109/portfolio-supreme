@@ -11,6 +11,14 @@
   text-align: center;
   padding: 10px 40px;
 }
+.about-cont-head {
+  font-size: 18px;
+  font-weight: 700;
+}
+.about-cont-text {
+  font-size: 14px;
+  font-weight: 500;
+}
 .about-sns li .icon {
   width: 35px;
   height: 40px;
@@ -26,7 +34,15 @@
   .section-about .about > * {
     width: inherit;
   }
+  .about-cont-head {
+    font-size: 16px;
+  }
   .about-cont-text {
     text-align: left;
+    font-size: 12px;
+  }
+  .about-sns li .icon {
+    margin-top: 8px;
+    width: 27px;
   }
 }

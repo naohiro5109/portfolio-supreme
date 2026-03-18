@@ -55,7 +55,7 @@
         "slide_5": {
           "type": "slide_block",
           "settings": {
-            "url": "https://be-supremer.com/c/category/search?sort=latest",
+            "url": "https://be-supremer.com/p/search?sort=latest",
             "img_pc": "shopify://shop_images/mv5.png",
             "img_sp": "shopify://shop_images/mv5_sp.png",
             "alt": "スライド画像",
@@ -251,7 +251,7 @@
         "tab_6"
       ],
       "settings": {
-        "section_title": "ブランドコラボレーション人気ランキング",
+        "section_title": "ブランドコラボレーション<br>人気ランキング",
         "title": "見出し"
       }
     },
@@ -343,6 +343,7 @@
         "section_title": "今週の人気ランキング",
         "title": "見出し",
         "columns_pc": 6,
+        "columns_sp": 3,
         "button_text": "商品一覧を見る",
         "button_color": "white"
       }

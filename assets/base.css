@@ -3683,6 +3683,12 @@ h2 {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  .collection .full-unstyled-link {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
   .collection .card-information .price {
     font-size: 12px;
   }

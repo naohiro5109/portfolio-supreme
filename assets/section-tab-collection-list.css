@@ -4,9 +4,6 @@
   background: #f4f4f4;
   border: 1px solid #E2E2E2;
 }
-.tab-button + .tab-button {
-  border-right: none;
-}
 .tab-button.active {
   color: #fff;
   background: #1b1b1b;
@@ -35,6 +32,11 @@
     height: 45px;
     font-size: 11px;
   }
+  .tab-button:nth-child(6n + 4),
+  .tab-button:nth-child(6n + 5),
+  .tab-button:nth-child(6n + 6) {
+    background: #fff;
+  }
   .tab-content-list {
     grid-template-columns:repeat(3, minmax(0, 1fr));
     gap: 10px;
@@ -50,7 +52,7 @@
 .button.button--white {
   color: #1b1b1b;
   background: transparent;
-  border: 1px solid #1b1b1b;
+  border: 2px solid #1b1b1b;
 }
 .button.button--white::after {
   box-shadow: none;
@@ -59,4 +61,9 @@
 }
 .button.button--white:hover::after {
   box-shadow: none;
+}
+@media screen and (max-width: 767px) {
+  .button.button--white {
+    font-size: 12px;
+  }
 }

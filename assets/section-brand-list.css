@@ -32,5 +32,9 @@
   }
   .brand-list-name {
     padding: 4px 0;
+    font-size: 14px;
+  }
+  .brand-list-name small {
+    font-size: 10px;
   }
 }

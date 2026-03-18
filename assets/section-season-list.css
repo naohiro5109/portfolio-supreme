@@ -25,6 +25,10 @@
   border-right: 2px solid #1b1b1b;
   transform: rotate(45deg) translateY(-50%);
 }
+.season-list-button {
+  font-size: 14px;
+  font-weight: 700;
+}
 @media screen and (max-width: 767px) {
   .section-season-list {
     padding-bottom: 30px!important;
@@ -32,5 +36,8 @@
   .season-list {
     grid-template-columns:repeat(2, minmax(0, 1fr));
     gap: 10px;
+  }
+  .season-list-button {
+    font-size: 12px;
   }
 }

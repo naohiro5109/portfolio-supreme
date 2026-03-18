@@ -38,7 +38,7 @@
   font-weight: 700;
   color: #1B1B1B;
   background: #fff;
-  border: 1px solid #1B1B1B;
+  border: 2px solid #1B1B1B;
   box-shadow: none;
 }
 #section-{{ section.id }} .more-btn::before,
@@ -58,6 +58,11 @@
 @media(min-width: 767px) {
   #section-{{ section.id }} .tab-buttons {
     grid-template-columns: repeat({{ section.settings.columns_pc }}, minmax(0, 1fr));
+  }
+}
+@media(max-width: 767px) {
+  #section-{{ section.id }} .more-btn {
+    font-size: 12px;
   }
 }
 </style>
@@ -131,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function(){
   "name": "タブメニュー商品リスト",
   "settings": [
     {
-      "type": "text",
+      "type": "textarea",
       "id": "section_title",
       "label": "セクションタイトル",
     },

@@ -88,6 +88,10 @@
   font-size: 18px;
   color: #fff;
 }
+.blog .card__heading a {
+  font-size: 18px;
+  font-weight: 500;
+}
 .blog .article-card__info {
   display: none;
   padding: 0;
@@ -102,6 +106,12 @@
   }
 }
 @media screen and (max-width: 989px) {
+  .blog__title {
+    font-size: 20px;
+  }
+  .blog .card__heading a {
+    font-size: 13px;
+  }
   .featured-blog-button {
     display: none;
   }
