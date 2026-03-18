@@ -1,6 +1,17 @@
 {{ 'section-banner-list.css' | asset_url | stylesheet_tag }}
 
-<section>
+{%- style -%}
+  #section-{{ section.id }}{
+    padding-bottom: {{ section.settings.padding_bottom_pc }}px;
+  }
+  @media screen and (max-width: 767px) {
+    #section-{{ section.id }}{
+      padding-bottom: {{ section.settings.padding_bottom_sp }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section id="section-{{ section.id }}">
   <div class="page-width">
     <ul class="banner-list">
       {% for block in section.blocks %}
@@ -37,7 +48,28 @@
 {% schema %}
 {
   "name": "バナーリスト",
-  "settings": [],
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_bottom_pc",
+      "label": "下余白(PC)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_sp",
+      "label": "下余白(SP)",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
   "blocks": [
     {
       "type": "banner_block",

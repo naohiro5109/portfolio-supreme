@@ -1,9 +1,20 @@
 {{ 'section-news.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  #section-{{ section.id }}{
+    padding-bottom: {{ section.settings.padding_bottom_pc }}px;
+  }
+  @media screen and (max-width: 767px) {
+    #section-{{ section.id }}{
+      padding-bottom: {{ section.settings.padding_bottom_sp }}px;
+    }
+  }
+{%- endstyle -%}
+
 {% if section.settings.blog != blank %}
   {% assign blog = blogs[section.settings.blog] %}
 
-  <section class="news">
+  <section id="section-{{ section.id }}" class="news">
     <h2 class="news-title">{{ section.settings.heading }}</h2>
     <ul class="news-list page-width">
       {% for article in blog.articles limit: section.settings.post_limit %}
@@ -41,6 +52,26 @@
       "max": 10,
       "step": 1,
       "default": 5
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_pc",
+      "label": "下余白(PC)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_sp",
+      "label": "下余白(SP)",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
     }
   ],
   "presets": [

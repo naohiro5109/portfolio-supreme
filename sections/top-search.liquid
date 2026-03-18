@@ -1,5 +1,33 @@
 {{ 'section-top-search.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  #section-{{ section.id }}.bg-color--white {
+    background: #fff;
+  }
+  #section-{{ section.id }}.bg-color--gray {
+    background: #F4F4F4;
+  }
+  #section-{{ section.id }}{
+    padding-bottom: {{ section.settings.padding_bottom_pc }}px;
+  }
+  @media screen and (max-width: 767px) {
+    #section-{{ section.id }}{
+      padding-bottom: {{ section.settings.padding_bottom_sp }}px;
+    }
+  }
+{%- endstyle -%}
+
+<style>
+  #section-{{ section.id }}.bg-color--gray.product-search {
+    padding: 50px 0!important;
+  }
+  @media screen and (max-width: 767px) {
+    #section-{{ section.id }}.bg-color--gray.product-search {
+      padding: 30px 0!important;
+    }
+  }
+</style>
+
 <section id="section-{{ section.id }}" class="product-search {% unless section.settings.show_pc %}hide-pc{% endunless %} {% unless section.settings.show_sp %}hide-sp{% endunless %} bg-color--{{ section.settings.bg_color }}">
   <div class="page-width">
     <form action="{{ routes.search_url }}" method="get" role="search" class="product-search-form">
@@ -33,15 +61,6 @@
   </div>
 </section>
 
-<style>
-#section-{{ section.id }}.bg-color--white {
-  background: #fff;
-}
-#section-{{ section.id }}.bg-color--gray {
-  background: #F4F4F4;
-}
-</style>
-
 {% schema %}
 {
   "name": "商品検索",
@@ -72,6 +91,26 @@
           "label": "グレー"
         }
       ],
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_pc",
+      "label": "下余白(PC)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_sp",
+      "label": "下余白(SP)",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
     }
   ],
   "blocks": [

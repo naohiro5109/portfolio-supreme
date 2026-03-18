@@ -1,6 +1,17 @@
 {{ 'section-main-slider.css' | asset_url | stylesheet_tag }}
 
-<section class="main-slider">
+{%- style -%}
+  #section-{{ section.id }}{
+    padding-bottom: {{ section.settings.padding_bottom_pc }}px;
+  }
+  @media screen and (max-width: 767px) {
+    #section-{{ section.id }}{
+      padding-bottom: {{ section.settings.padding_bottom_sp }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section id="section-{{ section.id }}" class="main-slider">
   <div class="swiper">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
@@ -69,6 +80,28 @@
   "tag": "section",
   "class": "shopify-main-slider",
   "max_blocks": 10,
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_bottom_pc",
+      "label": "下余白(PC)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_sp",
+      "label": "下余白(SP)",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
   "blocks": [
     {
       "type": "slide_block",

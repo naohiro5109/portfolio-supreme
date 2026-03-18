@@ -1,4 +1,5 @@
 .section-category-list {
+  padding-top: 50px;
   background: #1b1b1b;
 }
 .category-list {
@@ -16,6 +17,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .section-category-list {
+    padding-top: 30px;
+  }
   .category-list {
     display: flex;
     justify-content: center;
