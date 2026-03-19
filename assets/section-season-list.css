@@ -10,10 +10,8 @@
 }
 .season-list li {
   position: relative;
-  padding: 10px 30px 10px 10px;
-  background: #fff;
 }
-.season-list li::after {
+.season-list .season-list-button::after {
   content: "";
   display: block;
   position: absolute;
@@ -26,8 +24,12 @@
   transform: rotate(45deg) translateY(-50%);
 }
 .season-list-button {
+  display: block;
+  width: 100%;
   font-size: 14px;
   font-weight: 700;
+  padding: 10px 30px 10px 10px;
+  background: #fff;
 }
 @media screen and (max-width: 767px) {
   .section-season-list {
