@@ -429,7 +429,7 @@
         "block_1": {
           "type": "category_block",
           "settings": {
-            "url": "",
+            "url": "https://be-supremer.com/c/category",
             "img_pc": "shopify://shop_images/item1.jpg",
             "img_sp": "shopify://shop_images/item1_sp.jpg",
             "alt": "カテゴリー画像1",
@@ -439,7 +439,7 @@
         "block_2": {
           "type": "category_block",
           "settings": {
-            "url": "",
+            "url": "https://be-supremer.com/c/category/tshirt-longsleeve",
             "img_pc": "shopify://shop_images/item2.jpg",
             "img_sp": "shopify://shop_images/item2_sp.jpg",
             "alt": "カテゴリー画像2",
@@ -449,7 +449,7 @@
         "block_3": {
           "type": "category_block",
           "settings": {
-            "url": "",
+            "url": "https://be-supremer.com/c/category/sweatshirt-crewneck",
             "img_pc": "shopify://shop_images/item3.jpg",
             "img_sp": "shopify://shop_images/item3_sp.jpg",
             "alt": "カテゴリー画像3",
@@ -459,7 +459,7 @@
         "block_4": {
           "type": "category_block",
           "settings": {
-            "url": "",
+            "url": "https://be-supremer.com/c/category/jacket-outwear",
             "img_pc": "shopify://shop_images/item4.jpg",
             "img_sp": "shopify://shop_images/item4_sp.jpg",
             "alt": "カテゴリー画像4",
@@ -469,7 +469,7 @@
         "block_5": {
           "type": "category_block",
           "settings": {
-            "url": "",
+            "url": "https://be-supremer.com/c/category/cap-hat",
             "img_pc": "shopify://shop_images/item5.jpg",
             "img_sp": "shopify://shop_images/item5_sp.jpg",
             "alt": "カテゴリー画像5",
@@ -479,7 +479,7 @@
         "block_6": {
           "type": "category_block",
           "settings": {
-            "url": "",
+            "url": "https://be-supremer.com/c/category/beanie",
             "img_pc": "shopify://shop_images/item6.jpg",
             "img_sp": "shopify://shop_images/item6_sp.jpg",
             "alt": "カテゴリー画像6",
@@ -489,7 +489,7 @@
         "block_7": {
           "type": "category_block",
           "settings": {
-            "url": "",
+            "url": "https://be-supremer.com/c/category/backpack",
             "img_pc": "shopify://shop_images/item7.jpg",
             "img_sp": "shopify://shop_images/item7_sp.jpg",
             "alt": "カテゴリー画像7",
@@ -499,7 +499,7 @@
         "block_8": {
           "type": "category_block",
           "settings": {
-            "url": "",
+            "url": "https://be-supremer.com/c/category/waistbag-shoulderbag-totebag",
             "img_pc": "shopify://shop_images/item8.jpg",
             "img_sp": "shopify://shop_images/item8_sp.jpg",
             "alt": "カテゴリー画像8",
@@ -509,7 +509,7 @@
         "block_9": {
           "type": "category_block",
           "settings": {
-            "url": "",
+            "url": "https://be-supremer.com/c/category/shoes-boots",
             "img_pc": "shopify://shop_images/item9.jpg",
             "img_sp": "shopify://shop_images/item9_sp.jpg",
             "alt": "カテゴリー画像9",
@@ -519,7 +519,7 @@
         "block_10": {
           "type": "category_block",
           "settings": {
-            "url": "",
+            "url": "https://be-supremer.com/c/category/pants-shorts",
             "img_pc": "shopify://shop_images/item10.jpg",
             "img_sp": "shopify://shop_images/item10_sp.jpg",
             "alt": "カテゴリー画像",
@@ -529,7 +529,7 @@
         "block_11": {
           "type": "category_block",
           "settings": {
-            "url": "",
+            "url": "https://be-supremer.com/c/category/accessory",
             "img_pc": "shopify://shop_images/item11.jpg",
             "img_sp": "shopify://shop_images/item11_sp.jpg",
             "alt": "カテゴリー画像11",
